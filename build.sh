@@ -10,6 +10,9 @@ git submodule sync
 git submodule update
 
 set -e 
+export LC_ALL=C
+export LANG=C
+export LANGUAGE=C
 cd `dirname $0`
 
 if [ ! -e buildroot/.config ]
