@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-LDD_VERSION = 0d4519da730df17a6f0dd49b531f547d63e6eec6
+LDD_VERSION = 1567a7f1b733014a11909effab1e0ce9fee54285
 LDD_SITE = git@github.com:cu-ecen-aeld/assignment-7-Sambhrant.git
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
@@ -44,8 +44,6 @@ define LDD_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/scull/scull_load $(TARGET_DIR)/usr/bin/
 	$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/usr/bin/
 
-	# 4. Copy the startup init script to /etc/init.d/ and make it executable
-	$(INSTALL) -m 0755 $(@D)/S98lddmodules $(TARGET_DIR)/etc/init.d/S98lddmodules
 endef
 
 LDD_POST_BUILD_HOOKS += LDD_INSTALL_TARGET_CMDS
